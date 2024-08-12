@@ -5,7 +5,7 @@ import db from "../db.server";
 export const action = async ({ request }: ActionFunctionArgs) => {
   const { topic, shop, session, admin } = await authenticate.webhook(request);
 
-  if (!admin && topic !== 'SHOP_REDACT') {
+  if (!admin && topic !== "SHOP_REDACT") {
     // The admin context isn't returned if the webhook fired after a shop was uninstalled.
     // The SHOP_REDACT webhook will be fired up to 48 hours after a shop uninstalls the app.
     // Because of this, no admin context is available.
@@ -21,6 +21,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
       }
 
       break;
+    case "CARTS_CREATE":
     case "CUSTOMERS_DATA_REQUEST":
     case "CUSTOMERS_REDACT":
     case "SHOP_REDACT":

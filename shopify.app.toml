@@ -3,7 +3,7 @@
 client_id = "e01d7f788a019827e950bcf9261b0e5f"
 name = "remix-chat"
 handle = "remix-chat-147"
-application_url = "https://stephanie-conceptual-attempt-baptist.trycloudflare.com"
+application_url = "https://feeding-sensors-courses-genome.trycloudflare.com"
 embedded = true
 
 [build]
@@ -13,13 +13,13 @@ include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "read_products,write_products, read_inventory"
 
 [auth]
 redirect_urls = [
-  "https://stephanie-conceptual-attempt-baptist.trycloudflare.com/auth/callback",
-  "https://stephanie-conceptual-attempt-baptist.trycloudflare.com/auth/shopify/callback",
-  "https://stephanie-conceptual-attempt-baptist.trycloudflare.com/api/auth/callback"
+  "https://feeding-sensors-courses-genome.trycloudflare.com/auth/callback",
+  "https://feeding-sensors-courses-genome.trycloudflare.com/auth/shopify/callback",
+  "https://feeding-sensors-courses-genome.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
