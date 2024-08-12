@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "e01d7f788a019827e950bcf9261b0e5f"
+name = "remix-chat"
+handle = "remix-chat-147"
+application_url = "https://stephanie-conceptual-attempt-baptist.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-c3e6d5b9.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://stephanie-conceptual-attempt-baptist.trycloudflare.com/auth/callback",
+  "https://stephanie-conceptual-attempt-baptist.trycloudflare.com/auth/shopify/callback",
+  "https://stephanie-conceptual-attempt-baptist.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks"
+
+[pos]
+embedded = false
